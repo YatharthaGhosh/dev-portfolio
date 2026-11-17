@@ -113,6 +113,23 @@
   color: var(--text-2);
   font-weight: 500;
 }
+.timeline__proof {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 12px;
+  color: var(--text-2);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: color 0.2s var(--ease-out);
+}
+.timeline__proof svg {
+  width: 13px;
+  height: 13px;
+}
+.timeline__proof:hover {
+  color: var(--accent);
+}
 .timeline__intro {
   margin-top: 4px;
   color: var(--text-2);

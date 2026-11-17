@@ -1,4 +1,4 @@
-import { Layers } from "lucide-react";
+import { ArrowUpRight, Layers } from "lucide-react";
 import { experience } from "../data/site";
 import SectionHeading from "./ui/SectionHeading";
 import SpotlightCard from "./ui/SpotlightCard";
@@ -67,6 +67,11 @@ export default function Experience() {
             <Reveal as="li" key={role.org} className="timeline__item">
               <p className="timeline__title">
                 {role.title} <span>· {role.org}</span>
+                {role.proof && (
+                  <a className="timeline__proof" href={role.proof.href} target="_blank" rel="noreferrer">
+                    {role.proof.label} <ArrowUpRight aria-hidden="true" />
+                  </a>
+                )}
               </p>
               <p className="timeline__period">{role.period}</p>
             </Reveal>

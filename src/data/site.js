@@ -178,7 +178,12 @@ export const experience = {
   ],
   earlier: [
     { title: "AI/ML Intern", org: "Microsoft × AICTE Internship Program", period: "May 2025 – Jun 2025" },
-    { title: "Summer Intern", org: "India Space Lab", period: "Jun 2025 – Jul 2025" },
+    {
+      title: "Summer Intern",
+      org: "India Space Lab",
+      period: "Jun 2025 – Jul 2025",
+      proof: { label: "Offer letter", href: "https://drive.google.com/file/d/1KvuxMveed5KnBQJVRSPWGo1B20j6d9aK/view?usp=sharing" },
+    },
   ],
 };
 
@@ -221,10 +226,9 @@ export const about = {
     { label: "Open to", value: "AI Engineer roles" },
   ],
   certifications: [
-    { name: "Getting Started with AI", issuer: "IBM", href: "https://drive.google.com/file/d/1GTJgREu66FXuBQ3zebLIlCIw6HNTuyyH/view?usp=drive_link" },
-    { name: "Data Science and Analytics", issuer: "HP", href: "https://drive.google.com/file/d/1TLyR4wKHd5ekgSx3DhDavgk3vxaoK6v9/view?usp=drive_link" },
-    { name: "AI/ML Internship", issuer: "Microsoft × AICTE", href: "https://drive.google.com/file/d/1ruubm8OMj2u8_rnZRlhUspXRTOCA0TId/view?usp=drive_link" },
-    { name: "Summer Internship", issuer: "India Space Lab", href: "https://drive.google.com/file/d/1KvuxMveed5KnBQJVRSPWGo1B20j6d9aK/view?usp=drive_link" },
+    { name: "Getting Started with AI", issuer: "IBM", href: "https://drive.google.com/file/d/1GTJgREu66FXuBQ3zebLIlCIw6HNTuyyH/view?usp=sharing" },
+    { name: "Data Science and Analytics", issuer: "HP", href: "https://drive.google.com/file/d/1TLyR4wKHd5ekgSx3DhDavgk3vxaoK6v9/view?usp=sharing" },
+    { name: "AI/ML Internship", issuer: "Microsoft × AICTE", href: "https://drive.google.com/file/d/1lrQaF7YIQ2U3ZwhJqRlrEq16OriFNk8m/view?usp=sharing" },
     { name: "Complete Full Stack Web Development Bootcamp", issuer: "Udemy (Dr. Angela Yu)" },
   ],
 };
