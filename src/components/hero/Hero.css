@@ -1,0 +1,277 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+  padding-top: calc(var(--nav-h) + 32px);
+  padding-bottom: 96px;
+}
+
+.hero__grid {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+}
+
+/* ----- copy ----- */
+.hero__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  padding: 7px 14px 7px 12px;
+  border: 1px solid rgba(var(--accent-rgb), 0.25);
+  border-radius: 999px;
+  background: rgba(var(--accent-rgb), 0.06);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.hero__status-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.hero__status-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: ping 2s var(--ease-out) infinite;
+}
+
+@keyframes ping {
+  to {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+.hero__greeting {
+  margin-bottom: 14px;
+  color: var(--text-2);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.hero__title {
+  max-width: 13ch;
+  font-size: clamp(2.6rem, 7.4vw, 5.6rem);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+/* Each word slides up from behind an invisible mask */
+.hero__word-mask {
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+  vertical-align: top;
+}
+.hero__word {
+  display: inline-block;
+}
+
+.hero__positioning {
+  margin-top: 26px;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: clamp(0.92rem, 1.4vw, 1.05rem);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.hero__lead {
+  max-width: 520px;
+  margin-top: 12px;
+  color: var(--text-2);
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+/* accent words get a blue → sky gradient */
+.hero__word.accent {
+  background: linear-gradient(100deg, var(--accent) 10%, var(--accent-2) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* measured results under the call-to-action */
+.hero__proof {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  max-width: 560px;
+  margin: 36px 0 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(var(--accent-rgb), 0.03);
+}
+.hero__proof-item {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4px;
+  padding: 14px 16px;
+}
+.hero__proof-item + .hero__proof-item {
+  border-left: 1px solid var(--border);
+}
+.hero__proof dd {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.4vw, 1.65rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.hero__proof dt {
+  color: var(--text-2);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+@media (max-width: 520px) {
+  .hero__proof {
+    grid-template-columns: 1fr;
+  }
+  .hero__proof-item + .hero__proof-item {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+  .hero__proof-item {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 12px;
+  }
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: 40px;
+  color: var(--text-2);
+  font-size: 0.9rem;
+}
+
+.hero__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero__location svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+}
+
+.hero__divider {
+  width: 1px;
+  height: 22px;
+  background: var(--border-strong);
+}
+
+/* ----- 3D visual ----- */
+.hero__visual {
+  position: relative;
+  height: clamp(300px, 80vw, 420px);
+}
+
+/* soft blue glow behind the object */
+.hero__visual::before {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.16), transparent 65%);
+  pointer-events: none;
+}
+
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__orb-fallback {
+  position: absolute;
+  inset: 22%;
+  border: 1px solid rgba(var(--accent-rgb), 0.35);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(var(--accent-rgb), 0.25), transparent 60%), var(--bg-2);
+  box-shadow: 0 0 80px rgba(var(--accent-rgb), 0.15);
+}
+
+/* ----- scroll cue ----- */
+.hero__scroll {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transform: translateX(-50%);
+  color: var(--text-3);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.hero__scroll-line {
+  position: relative;
+  width: 1px;
+  height: 44px;
+  overflow: hidden;
+  background: var(--border-strong);
+}
+.hero__scroll-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: translateY(-100%);
+  animation: scroll-cue 2.2s var(--ease-out) infinite;
+}
+
+@keyframes scroll-cue {
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* ----- desktop ----- */
+@media (min-width: 960px) {
+  .hero__grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 32px;
+  }
+  .hero__visual {
+    height: 560px;
+    margin-right: -40px;
+  }
+}
+
+@media (min-width: 960px) and (min-height: 760px) {
+  .hero__scroll {
+    display: flex;
+  }
+}

@@ -1,0 +1,131 @@
+.role {
+  padding: clamp(20px, 3.4vw, 36px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-2);
+}
+
+.role__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+
+.role__title {
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+}
+
+.role__org {
+  margin-top: 6px;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+.role__period,
+.timeline__period {
+  color: var(--text-2);
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.role__intro {
+  margin-top: 12px;
+  color: var(--text-2);
+}
+
+.role__grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.work-card {
+  height: 100%;
+  padding: 20px;
+}
+.work-card__title {
+  font-size: 1.05rem;
+}
+.work-card__detail {
+  margin-top: 10px;
+  color: var(--text-2);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.work-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+.work-card__tags li {
+  padding: 3px 9px;
+  border: 1px solid rgba(var(--accent-rgb), 0.25);
+  border-radius: 999px;
+  background: rgba(var(--accent-rgb), 0.06);
+  color: var(--text);
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+/* the development side: present, but secondary */
+.role__platform {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+  padding: 14px 16px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--text-2);
+  font-size: 0.88rem;
+}
+.role__platform svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  color: var(--accent);
+}
+
+.timeline {
+  display: grid;
+  margin-top: 18px;
+  border-top: 1px solid var(--border);
+}
+.timeline__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 24px;
+  padding: 16px 4px;
+  border-bottom: 1px solid var(--border);
+}
+.timeline__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+.timeline__title span {
+  color: var(--text-2);
+  font-weight: 500;
+}
+.timeline__intro {
+  margin-top: 4px;
+  color: var(--text-2);
+  font-size: 0.88rem;
+}
+
+@media (min-width: 720px) {
+  .role__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1080px) {
+  .role__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

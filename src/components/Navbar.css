@@ -1,0 +1,128 @@
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 0.35s var(--ease-out),
+    border-color 0.35s var(--ease-out),
+    backdrop-filter 0.35s var(--ease-out);
+}
+
+.nav--solid {
+  background: rgba(8, 9, 11, 0.72);
+  border-bottom-color: var(--border);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: var(--nav-h);
+}
+
+.nav__brand {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.nav__links {
+  display: none;
+  gap: 4px;
+  padding: 5px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(17, 19, 24, 0.5);
+}
+
+.nav__link {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: var(--text-2);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition:
+    color 0.2s var(--ease-out),
+    background-color 0.2s var(--ease-out);
+}
+.nav__link:hover {
+  color: var(--text);
+}
+.nav__link.is-active {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.nav__cta {
+  display: none;
+}
+
+.nav__toggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+}
+.nav__toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ----- mobile menu panel ----- */
+.nav__mobile {
+  height: calc(100svh - var(--nav-h));
+  overflow-y: auto;
+  border-top: 1px solid var(--border);
+  background: rgba(8, 9, 11, 0.96);
+}
+.nav__mobile ul {
+  padding-block: 24px 40px;
+}
+
+.nav__mobile-link {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.nav__mobile-link.is-active {
+  color: var(--accent);
+}
+
+.nav__mobile-index {
+  color: var(--text-3);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+}
+
+.nav__mobile-cta {
+  padding-top: 32px;
+}
+.nav__mobile-cta .btn {
+  width: 100%;
+}
+
+/* ----- desktop ----- */
+@media (min-width: 900px) {
+  .nav__links,
+  .nav__cta {
+    display: flex;
+  }
+  .nav__toggle {
+    display: none;
+  }
+}
