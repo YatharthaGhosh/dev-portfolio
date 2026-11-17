@@ -2,6 +2,8 @@
 
 Portfolio of **Yathartha Ghosh**, AI engineer: RAG, multi-agent systems and production LLM features, with full-stack engineering behind them.
 
+**Live:** https://yatharthaghosh.netlify.app
+
 A dark, blue-themed single-page site built with React and Vite, with an interactive 3D hero, project case studies with screenshots and evaluation charts, and a contact form.
 
 ## Tech stack
