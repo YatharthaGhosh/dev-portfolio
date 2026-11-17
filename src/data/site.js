@@ -8,7 +8,7 @@ export const site = {
   name: "Yathartha Ghosh",
   brand: "Y. GHOSH",
   role: "AI Engineer",
-  location: "Kolkata, India",
+  location: "Howrah, India",
   status: "Open to AI Engineer roles",
   email: "ghoshyathartha51103@gmail.com",
   links: {
@@ -210,12 +210,12 @@ export const alsoShips = ["Python", "FastAPI", "Java 17", "Spring Boot", "React 
 
 export const about = {
   paragraphs: [
-    "I'm Yathartha, an AI engineer from Kolkata. I build LLM features that real users depend on: grounded chatbots, vision and OCR pipelines, content generation, and the cost and quality controls around them.",
+    "I'm Yathartha, an AI engineer from Howrah, West Bengal. I build LLM features that real users depend on: grounded chatbots, vision and OCR pipelines, content generation, and the cost and quality controls around them.",
     "I care about AI systems that can be trusted: access control enforced where the data lives, answers that cite their sources, humans approving anything high-stakes, and evaluations that show what works and what doesn't.",
     "My full-stack background means I can take a model all the way to production: the API, the interface, the deployment.",
   ],
   facts: [
-    { label: "Based in", value: "Kolkata, India" },
+    { label: "Based in", value: "Howrah, West Bengal, India" },
     { label: "Currently", value: "Full Stack Developer, The 3C Edge" },
     { label: "Education", value: "B.Tech CSE (AI & ML), MCKV Institute of Engineering (MAKAUT), 2022–2026 · CGPA 7.52" },
     { label: "Open to", value: "AI Engineer roles" },
